@@ -32,6 +32,95 @@
 
         body {
             font-family: 'Quicksand', sans-serif;
+            font-size: var(--md);
+        }
+
+        nav {
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        .navbar-left ul,
+        .navbar-right ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            align-items: center;
+            height: 60px;
+        }
+
+        .navbar-left {
+            display: flex;
+            margin-left: 12px;
+        }
+
+        .navbar-left ul {
+            margin-left: 12px;
+        }
+
+        .navbar-left ul li a,
+        .navbar-left ul li a {
+            padding: 8px;
+            text-decoration: none;
+            color: var(--very-light-pink);
+            border: 1px solid var(--white);
+            border-radius: 8px;
+        }
+
+        .navbar-left ul li a:hover,
+        .navbar-left ul li a:hover {
+            text-decoration: none;
+            color: var(--hospital-green);
+            border: 1px solid var(--hospital-green);
+        }
+
+        .navbar-email {
+            margin-right: 12px;
+            font-size: var(--sm);
+            color: var(--very-light-pink);           
+        }
+
+        .navbar-shopping-cart {
+            position: relative;
+        }
+
+        .navbar-shopping-cart div {
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: var(--sm);
+            font-weight: bold;
+            background-color: var(--hospital-green);
+            border-radius: 50%;
+        }
+
+        @media (max-width: 640px) {
+            .menu {
+                display: block;
+            }
+
+            .navbar-left ul {
+                display: none;
+            }
+
+            .navbar-email {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -65,11 +154,13 @@
         </div>
 
         <div class="navbar-right">
-            <li>user@example.com</li>
-            <li class="navbar-shopping-cart">
-                <img src="./assets/icons/icon_shopping_cart.svg" alt="shopping cart">
-                <div>2</div>
-            </li>
+            <ul>
+                <li class="navbar-email">user@example.com</li>
+                <li class="navbar-shopping-cart">
+                    <img src="./assets/icons/icon_shopping_cart.svg" alt="shopping cart">
+                    <div>2</div>
+                </li>
+            </ul>
         </div>
     </nav>
 </body>
